@@ -15,18 +15,15 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.getvlues();
   }
   registerToggle(){
 
-    this.registerMode = !this.registerMode; // toggle switch btween register or not
+    this.registerMode = true; // setting the rigster mode to true
   }
 
-  getvlues() {
-    this.http.get('http://localhost:5000/api/values').subscribe(response => {
-      this.values = response;
-    } , error => {
-      console.log(error);
-    });
+
+  cancelRegisterMode(registerMode: boolean) {
+
+    this.registerMode = registerMode; // calling the cancel method when user click on cancel
   }
 }
