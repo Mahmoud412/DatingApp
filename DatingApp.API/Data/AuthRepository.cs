@@ -11,7 +11,7 @@ namespace DatingApp.API.Properties.Data
         private readonly DataContext _context;
         public AuthRepository(DataContext context)
         {
-            this._context = context;
+            _context = context;
 
 
         }
