@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using DatingApp.API.Data;
 using DatingApp.API.Helpers;
 using DatingApp.API.Properties.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -38,6 +39,7 @@ namespace DatingApp.API
             services.AddControllers();
             services.AddCors();
             services.AddScoped<IAuthRepository,AuthRepository>();
+            services.AddScoped <IDatingRepository,DatingRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options=>{
                 options.TokenValidationParameters = new TokenValidationParameters
