@@ -19,10 +19,11 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MemberListComponent } from './member-list/member-list.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { appRoutes } from './routes';
+import { MemberListComponent } from './member-list/member-list.component';
+
 
 
 @NgModule({
@@ -31,9 +32,9 @@ import { appRoutes } from './routes';
       NavComponent,
       HomeComponent,
       RegisterComponent,
-      MemberListComponent,
       ListsComponent,
-      MessagesComponent
+      MemberListComponent,
+      MessagesComponent,
    ],
    imports: [
       BrowserModule,
