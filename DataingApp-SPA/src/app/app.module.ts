@@ -4,6 +4,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+
+
 
 import { RouterModule } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
@@ -41,11 +44,11 @@ export function tokenGetter() {
 }
 
 export class CustomHammerConfig extends HammerGestureConfig{
-   overrides = {
+      overrides = {
       pinch: { enable: false },
       rotate: {enable: false}
-   };
- }
+    };
+   }
 
 @NgModule({
    declarations: [
@@ -61,7 +64,7 @@ export class CustomHammerConfig extends HammerGestureConfig{
    ],
    imports: [
       BrowserModule,
-      HttpClientModule,
+      HttpClientModule, NgxGalleryModule ,
       FormsModule,
       BrowserAnimationsModule,
       BsDropdownModule.forRoot(),
