@@ -41,6 +41,7 @@ import { MemberlistResolver } from './_resolvers/member-list.resolver ';
 import { MemebrEditComponent } from './members/memebr-edit/memebr-edit.component';
 import { MemberEditResolver } from './_resolvers/member-edit.resolver ';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
+import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -64,7 +65,8 @@ export class CustomHammerConfig extends HammerGestureConfig{
       MessagesComponent,
       MemberCardComponent,
       MemberDetailComponent,
-      MemebrEditComponent
+      MemebrEditComponent,
+      PhotoEditorComponent
    ],
    imports: [
       BrowserModule,
